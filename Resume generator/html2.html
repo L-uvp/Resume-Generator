@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="cs2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container" id="Resume">
+        <h1 class="text-center my-2">Resume Details<h1>
+            <br> 
+    <div class="row">
+        <div class="col-md-6">
+            <!-- first col -->
+            <h3>Personal Information</h3>
+            <div class="form-group">
+                <label for="nameField"><h6>Your Name</h6></label>
+                <input type="text" id="nameField" placeholder="Enter Here" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="contactField"><h6>Phone Number</h6></label>
+                <input type="text" id="contactField" placeholder="Enter Here" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="addressField"><h6>Your Address</h6></label>
+                <textarea type="text" id="addressField" placeholder="Enter Here" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for=""><h6>Select your Profile photo</h6></label>
+                <input type="file" id="imgField" class="form-control"/>
+            </div>
+
+            <p class="text-secondary"><h5>FIND ME ONLINE</h5></p>
+
+            <div class="form-group">
+                <label for="githubField"><h6>Github</h6></label>
+                <input type="text" id="githubField" placeholder="Enter Here" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="LinkedinField"><h6>Linkedin</h6></label>
+                <input type="text" id="LinkedinField" placeholder="Enter Here" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="emailField"><h6>Email</h6></label>
+                <input type="text" id="emailField" placeholder="Enter Here" class="form-control">
+            </div>
+
+        </div>
+        
+        <div class="col-md-6">
+             <!-- Second col -->
+             <h3>Professional Information</h3>
+
+             <div class="form-group mt-2">
+                <label for=""><h5>About your self</h5></label>
+                <textarea id="objectField" placeholder="Enter Here" class="form-control"></textarea>
+             </div>
+
+            <div class="form-group mt-2" id="eq">
+                <label for=""><h5>Academic Qualification</h5></label>
+                <textarea placeholder="Enter Here" class="form-control eqField"></textarea>
+
+                <div class="container text-center" id="eqButton">
+                    <button onclick="addNewEQField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+            </div>
+
+            <div class="form-group mt-2" id="sk">
+                <label for=""><h5>SKILLS</h5></label>
+                <input placeholder="Enter Here" class="form-control skField"></input>
+
+                <div class="container text-center" id="skButton">
+                    <button onclick="addNewSKField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+            </div>
+
+            <div class="form-group mt-2" id="lg">
+                <label for=""><h5>Language</h5></label>
+                <input placeholder="Enter Here" class="form-control lgField"></input>
+
+                <div class="container text-center" id="lgButton">
+                    <button onclick="addNewLGField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+            </div>
+
+            <div class="form-group mt-2" id="pg">
+                <label for=""><h5>Project</h5></label>
+                <input placeholder="Enter Here" class="form-control pgField"></input>
+
+                <div class="container text-center" id="pgButton">
+                    <button onclick="addNewPGField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container text-center mt-4">
+        <button onclick="generate()" class="btn btn-primary btn-lg">Generate</button>
+    </div>
+    </div>
+
+
+
+
+    <div class="container" id="resume-template">
+
+        <div class="row">
+
+            <div class="col-md-4 text-center py-3 background">
+                <!-- first col --> 
+                <p><h5> Personal Information</h5></p>
+                <hr>
+                <div class="container">
+                    <p id="number">+91 8865936223</p>
+                    <p id="location">Dehradun</p>
+                    <hr>
+
+                    <p>
+                        <a id="git" href="#">Github</a>
+                    </p>
+                    <p>
+                        <a id="linkd" href="#">Linkedin</a>
+                    </p>
+                    <p>
+                        <a id="emaild" href="#">gmail</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-8 py-3">
+                <!-- Second <col> -->
+                <h2 class="text-center" style="font-weight: 800; " id="name">Random</h2>
+                
+                <!-- objective card -->
+                <div class="card mt-4 ">
+                    <div class="card-header" style="background-color: lightskyblue;">
+                        <h4>Objective</h4>
+                    </div>
+                    <div class="card-body">
+                        <p id="obj">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero cupiditate quisquam assumenda illo asperiores. Cum, necessitatibus architecto quisquam pariatur labore corporis officia blanditiis perspiciatis accusamus, nostrum nihil vero ipsum exercitationem?</p>
+                    </div>
+                </div>
+
+                <!-- Academic -->
+                <div class="card mt-4">
+                    <div class="card-header"style="background-color: lightskyblue;">
+                        <h4>Academic</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul id="eqt">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, architecto.</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <!-- skills -->
+                <div class="card mt-4">
+                    <div class="card-header"style="background-color: lightskyblue;">
+                        <h4>Skills</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul id="skt">
+                            <li>c</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- project -->
+                <div class="card mt-4">
+                    <div class="card-header"style="background-color: lightskyblue;">
+                        <h4>Project</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul id="pgt">
+                            <li><a href="#" id="lin">www.game.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- language -->
+                <div class="card mt-4">
+                    <div class="card-header"style="background-color: lightskyblue;">
+                        <h4>Language</h4>
+                    </div>
+                    <div class="card-body" id="lgt">
+                        <ul>
+                            <li>English</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-3 text-center">
+                <button onclick="printresume()" class="btn " style="background-color:gray;" >Print</button>
+            </div>
+        </div>    
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js.js"></script>
+</body>
+</html>   

@@ -1,0 +1,20 @@
+/* #Resume{
+    display: none;
+} */
+
+#resume-template{
+    display: none;
+}
+
+.myimg{
+    border-radius: 50%;
+    width: 200px;
+}
+
+.background {
+    background-color: lightskyblue;
+}
+
+.back{
+    background-color: lightskyblue;
+}
